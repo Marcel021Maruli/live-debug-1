@@ -66,7 +66,7 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     stock: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         notEmpty: {
@@ -81,7 +81,7 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
   }, { sequelize });
-  
+
   Book.associate = function (models) {
     // associations can be defined here
     Book.hasMany(models.Loan)

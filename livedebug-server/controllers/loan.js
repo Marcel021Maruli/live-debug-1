@@ -24,7 +24,11 @@ class LoanController {
 
   static returnALoan(req, res, next) {
     const { id } = req.params;
-    Loan.findOne({ id })
+    Loan.findOne({
+      where: {
+        id: id
+      }
+      })
       .then(function (loan) {
         if (!loan) {
           next({ code: 404, resource: 'Loan' });
