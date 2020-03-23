@@ -10,4 +10,3 @@ Steps:
 - npm run test
 - do not change test code
 - DB NAME : lc-debug-server
-
